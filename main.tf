@@ -1,17 +1,17 @@
 
-resource "aws_lakeformation_data_lake_settings" "lf_data_lake_admin" {
-  count = 1
-   admins = [ data.aws_caller_identity.current.arn]
-}
+# resource "aws_lakeformation_data_lake_settings" "lf_data_lake_admin" {
+#   count = 1
+#    admins = [ data.aws_caller_identity.current.arn]
+# }
 
 
-resource "aws_lakeformation_resource" "aws_lf_resource_register" {
-  count = 1
+# resource "aws_lakeformation_resource" "aws_lf_resource_register" {
+#   count = 1
 
-  arn = var.bucket_register
+#   arn = var.bucket_register
 
-  depends_on = [ aws_lakeformation_data_lake_settings.lf_data_lake_admin]
-}
+#   depends_on = [ aws_lakeformation_data_lake_settings.lf_data_lake_admin]
+# }
 
 
 resource "aws_lakeformation_permissions" "aws_lf_permissions" {
