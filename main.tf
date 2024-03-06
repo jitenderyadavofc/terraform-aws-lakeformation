@@ -24,6 +24,6 @@ resource "aws_lakeformation_permissions" "aws_lf_permissions" {
       name =  each.value.db_name
     }
 
-  depends_on = [ aws_lakeformation_data_lake_settings.lf_data_lake_admin, aws_lakeformation_resource.aws_lf_resource_register ]
+  #depends_on = [ aws_lakeformation_data_lake_settings.lf_data_lake_admin, aws_lakeformation_resource.aws_lf_resource_register ]
 }
 
